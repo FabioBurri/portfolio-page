@@ -1,1 +1,39 @@
-<h1>'hello world'</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Flags Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>World Flags Quiz</h1>
+        </div>
+        <div class="question">
+            <img src="https://restcountries.com/v3.1/all" alt="Flag">
+        </div>
+        <div class="answers">
+            <button class="answer-option">Option 1</button>
+            <button class="answer-option">Option 2</button>
+            <button class="answer-option">Option 3</button>
+            <button class="answer-option">Option 4</button>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="timer">
+            Time Left: <span id="time-left">180</span> seconds
+        </div>
+        <div class="final-score">
+            Your Score: <span id="score">0</span>
+        </div>
+        <div class="feedback">
+            <p id="feedback-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
