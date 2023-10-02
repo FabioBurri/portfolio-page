@@ -1,21 +1,22 @@
 // Constants
-const apiUrl = 'https://restcountries.com/v3.1/all'; // Replace with the actual API URL
+const apiUrl = 'https://restcountries.com/v3.1/all';
 
 // Variables
 let countriesData = []; // To store data from the API
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 180; // Initial time limit in seconds
+let timeLeft = 180; // Time limit -> set to 3 minutes, could be higher after some tests
 let timerInterval;
 
 // DOM Elements
-const flagImage = document.querySelector('png');
+const flagImage = document.getElementById('flag-image');
+const optionButtons = [document.getElementById('option1'), document.getElementById('option2'), document.getElementById('option3'), document.getElementById('option4')]; // Updated to use getElementById for each button
 const questionElement = document.querySelector('.question');
-const answerButtons = document.querySelectorAll('.answer-option');
 const progressBar = document.querySelector('.progress-bar');
 const timeLeftElement = document.getElementById('time-left');
 const scoreElement = document.getElementById('score');
 const feedbackMessageElement = document.getElementById('feedback-message');
+
 
 // Fetch data from the API
 async function fetchData() {
@@ -44,7 +45,7 @@ function showNextQuestion() {
     // Access the flag image URL (PNG version)
     const flagImageUrl = countryData.flags.png;
 
-    // Set the flag image source in your HTML
+    // Set the flag image source
     flagImage.src = flagImageUrl;
 
     // Display flag and options
@@ -54,7 +55,7 @@ function showNextQuestion() {
     const shuffledOptions = shuffleAnswers(correctAnswer);
 
     // Set the answer options text
-    answerButtons.forEach((button, index) => {
+    optionButtons.forEach((button, index) => {
       button.textContent = shuffledOptions[index];
       button.addEventListener('click', () => checkAnswer(button.textContent, correctAnswer));
     });
@@ -64,6 +65,7 @@ function showNextQuestion() {
     endGame();
   }
 }
+
 
 
 // Shuffle answer options to randomize their order
@@ -116,7 +118,7 @@ function updateTimer() {
 function endGame() {
   flagImage.style.display = 'none';
   questionElement.textContent = 'Quiz Complete!';
-  answerButtons.forEach((button) => button.style.display = 'none');
+  optionButtons.forEach((button) => button.style.display = 'none');
   feedbackMessageElement.textContent = '';
   scoreElement.textContent = `Your Score: ${score}`;
 }

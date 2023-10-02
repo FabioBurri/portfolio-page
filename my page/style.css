@@ -51,6 +51,12 @@ body {
   background-color: #45a049;
 }
 
+
+.answer-option:hover {
+  background-color: #00688B; /* Change hover background color */
+}
+
+
 /* Progress bar style */
 .progress-container {
   width: 100%;
