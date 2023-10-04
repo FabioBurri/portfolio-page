@@ -4,20 +4,95 @@ body, h1, p, ul {
   padding: 0;
 }
 
-/* Background color and font family */
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+/* Navigation Bar styles */
+.navbar {
+  background-color: white;
+  overflow: hidden;
 }
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* Section styles */
+section {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Footer at the bottom */
+.content-container {
+  flex: 1;
+}
+
+/* Footer style */
+.footer {
+  background-color: lightgrey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+/* Social Media Icons styles */
+.social-media {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media a {
+  color: black;
+  font-size: 24px;
+}
+
+.social-media a:hover {
+  color: white;
+}
+
+body {
+  background-color: white;
+  text-align: center;
+  font-family: Open, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 
 /* Container for the quiz */
 .quiz-container {
   max-width: 600px;
   margin: 20px auto;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 50px;
 }
 
 /* Header style */
@@ -51,7 +126,7 @@ body {
 
 
 .answer-option:hover {
-  background-color: #00688B; /* Hover background color */
+  background-color: #00688B;
 }
 
 

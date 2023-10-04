@@ -5,6 +5,8 @@ Design:
 - Flagge kleiner machen
 - Farben ändern und Hintergrund allenfalls anpassen
 - Zeitbalken soll ablaufen
+- Logo & Favicon
+- SoMe Icons im Footer
 
 Funktionell:
 - Bug lösen: Richtige Antwort soll als richtig angezeigt werden
