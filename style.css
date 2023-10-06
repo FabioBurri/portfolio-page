@@ -4,10 +4,18 @@ body, h1, p, ul {
   padding: 0;
 }
 
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
 /* Navigation Bar styles */
 .navbar {
   background-color: white;
   overflow: hidden;
+  position: relative;
 }
 
 .navbar ul {
@@ -15,11 +23,12 @@ body, h1, p, ul {
   margin: 0;
   padding: 0;
   text-align: center;
+  display: inline-block;
 }
 
 .navbar li {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 20px;
 }
 
 .navbar a {
@@ -29,12 +38,104 @@ body, h1, p, ul {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1em;
+  position: relative;
+  transition: font-weight 0.3s;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar a.active::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  font-weight: bold;
   background-color: transparent;
 }
+
+/* Hamburger style */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-items li {
+  margin: 0 20px;
+}
+
+
+/* Side Navigation styles */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-nav a {
+  padding: 10px 15px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #f1f1f1;
+}
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .hamburger {
+      display: block;
+  }
+
+  .nav-items {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+  }
+
+  .nav-items.active {
+      display: flex;
+  }
+}
+
+
+
 
 /* Section styles */
 section {
@@ -165,4 +266,84 @@ body {
   text-align: center;
   font-size: 18px;
   margin-top: 10px;
+}
+
+/* Home page style */
+.hero-image {
+  background-image: url('https://flagpoles.co.uk/wp-content/uploads/2018/03/12.jpg');
+  /* another picture: https://cdn11.bigcommerce.com/s-ccu2fgip1l/product_images/uploaded_images/flags-around-the-world.png*/
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  color: white;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+.to-quiz-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.to-quiz-button:hover {
+  background-color: #45a049;
+}
+
+.hero-image p {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+
+/* How it works page style */
+#rules-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#rules-page h1 {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+#rules-page p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.rules-list {
+  padding-left: 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.rules-list li {
+  margin-bottom: 5px;
 }

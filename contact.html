@@ -12,13 +12,20 @@
     <div class="content-container">
         <!-- Header (Navigation) -->
         <nav class="navbar">
-            <ul>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="openNavWindow()">
+                &#9776;
+            </div>
+        
+            <!-- Navigation Items -->
+            <ul class="nav-items">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="rules.html">Rules</a></li>
+                <li><a href="rules.html">How it works</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html"class="active">Contact</a></li>
             </ul>
         </nav>
+        
 
         <!-- Contact body -->
         <section id="contact">
@@ -39,6 +46,8 @@
             <a href="https://github.com/FabioBurri" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
+    
+<script src="script.js"></script>
 
 </body>
 </html>

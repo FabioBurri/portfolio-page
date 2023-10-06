@@ -12,18 +12,34 @@
     <div class="content-container">
         <!-- Header (Navigation) -->
         <nav class="navbar">
-            <ul>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="openNavWindow()">
+                &#9776;
+            </div>
+        
+            <!-- Navigation Items -->
+            <ul class="nav-items">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="rules.html">Rules</a></li>
+                <li><a href="rules.html"class="active">How it works</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
+
         <!-- Rules body -->
-        <section id="rules">
-            <h2>Rules</h2>
-            <p>Here are the rules for the quiz:</p>
+        <section id="rules-page">
+            <h1>How the quiz works</h1>
+            <p>Before you start the quiz, please take a moment to understand how the game works. This will ensure a smooth but still challenging experience for you.</p>
+    
+            <ol class="rules-list">
+                <li>There are several flags shown around the world.</li>
+                <li>The quiz has a limit of 3 minutes.</li>
+                <li>There are no penalties for incorrect answers.</li>
+                <li>You can't return to previous questions once answered.</li>
+                <li>Final scores will be displayed at the end of the quiz.</li>
+                <li>Enjoy the challenge!</li>
+            </ol>
         </section>
     </div>
 
@@ -38,6 +54,8 @@
             <a href="https://github.com/FabioBurri" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

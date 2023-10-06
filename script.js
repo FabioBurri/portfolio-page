@@ -2,7 +2,7 @@
 const apiUrl = 'https://restcountries.com/v3.1/all';
 
 // Variables
-let countriesData = []; // To store data from the API
+let countriesData = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 180; // Time limit -> set to 3 minutes, could be higher after some tests
@@ -16,6 +16,20 @@ const progressBar = document.querySelector('.progress-bar');
 const timeLeftElement = document.getElementById('time-left');
 const scoreElement = document.getElementById('score');
 const feedbackMessageElement = document.getElementById('feedback-message');
+
+// Hamburger menu
+function openNavWindow() {
+  const navWindow = window.open("", "navWindow", "width=50%,height=100%,left=50%,top=0");
+  navWindow.document.write(`
+      <link rel="stylesheet" href="nav-window.css">
+      <ul class="nav-items">
+          <li><a href="home.html" target="_parent">Home</a></li>
+          <li><a href="rules.html" target="_parent">How it works</a></li>
+          <li><a href="quiz.html" target="_parent">Quiz</a></li>
+          <li><a href="contact.html" target="_parent">Contact</a></li>
+      </ul>
+  `);
+}
 
 
 // Fetch data from the API

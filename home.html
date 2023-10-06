@@ -12,18 +12,32 @@
     <div class="content-container">
         <!-- Header (Navigation) -->
         <nav class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="rules.html">Rules</a></li>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="openNavWindow()">
+                &#9776;
+            </div>
+        
+            <!-- Navigation Items -->
+            <div id="nav-overlay" class="nav-overlay"></div>
+            <ul class="nav-items">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="rules.html">How it works</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
+
         <!-- Home body -->
         <section id="home">
-            <h2>Welcome to Flagtastrophe!</h2>
-            <p>Test your knowledge of world flags.</p>
+            <section id="home">
+                <div class="hero-image">
+                    <h1>Welcome to Flagtastrophe!</h1>
+                    <p>Test your knowledge of world flags.</p>
+                    <a href="quiz.html" class="to-quiz-button">Start Quiz</a>
+                </div>
+            </section>
+        </div>
         </section>
     </div>
 
@@ -39,5 +53,8 @@
         </div>
     </footer>
     </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
