@@ -10,7 +10,12 @@ let timerInterval;
 
 // DOM Elements
 const flagImage = document.getElementById('flag-image');
-const optionButtons = [document.getElementById('option1'), document.getElementById('option2'), document.getElementById('option3'), document.getElementById('option4')]; // Updated to use getElementById for each button
+const optionButtons = [
+  document.getElementById('option1'),
+  document.getElementById('option2'),
+  document.getElementById('option3'),
+  document.getElementById('option4'),
+]; // Updated to use getElementById for each button
 const questionElement = document.querySelector('.question');
 const progressBar = document.querySelector('.progress-bar');
 const timeLeftElement = document.getElementById('time-left');
@@ -18,19 +23,25 @@ const scoreElement = document.getElementById('score');
 const feedbackMessageElement = document.getElementById('feedback-message');
 
 // Hamburger menu
-function openNavWindow() {
-  const navWindow = window.open("", "navWindow", "width=50%,height=100%,left=50%,top=0");
-  navWindow.document.write(`
-      <link rel="stylesheet" href="nav-window.css">
-      <ul class="nav-items">
-          <li><a href="home.html" target="_parent">Home</a></li>
-          <li><a href="rules.html" target="_parent">How it works</a></li>
-          <li><a href="quiz.html" target="_parent">Quiz</a></li>
-          <li><a href="contact.html" target="_parent">Contact</a></li>
-      </ul>
-  `);
-}
+const openNavWindow = () => {
+  const x = document.getElementById('menu');
+  if (window.innerWidth <= 600) {
+    if (x.style.display === 'flex' || getComputedStyle(x).display === 'flex') {
+      x.style.display = 'none';
+    } else {
+      x.style.display = 'flex';
+    }
+  }
+};
 
+window.addEventListener('resize', () => {
+  const x = document.getElementById('menu');
+  if (window.innerWidth > 600) {
+    x.style.display = 'flex';
+  } else {
+    x.style.display = 'none';
+  }
+});
 
 // Fetch data from the API
 async function fetchData() {
@@ -71,7 +82,9 @@ function showNextQuestion() {
     // Set the answer options text
     optionButtons.forEach((button, index) => {
       button.textContent = shuffledOptions[index];
-      button.addEventListener('click', () => checkAnswer(button.textContent, correctAnswer));
+      button.addEventListener('click', () =>
+        checkAnswer(button.textContent, correctAnswer)
+      );
     });
 
     currentQuestionIndex++;
@@ -79,8 +92,6 @@ function showNextQuestion() {
     endGame();
   }
 }
-
-
 
 // Shuffle answer options to randomize their order
 function shuffleAnswers(correctAnswer) {
@@ -110,7 +121,8 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     score++;
     feedbackMessageElement.textContent = 'Correct!';
   } else {
-    feedbackMessageElement.textContent = 'Wrong! The correct answer is ' + correctAnswer;
+    feedbackMessageElement.textContent =
+      'Wrong! The correct answer is ' + correctAnswer;
   }
 
   // Move to the next question
@@ -132,7 +144,7 @@ function updateTimer() {
 function endGame() {
   flagImage.style.display = 'none';
   questionElement.textContent = 'Quiz Complete!';
-  optionButtons.forEach((button) => button.style.display = 'none');
+  optionButtons.forEach((button) => (button.style.display = 'none'));
   feedbackMessageElement.textContent = '';
   scoreElement.textContent = `Your Score: ${score}`;
 }

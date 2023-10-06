@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flagtastrophe! - Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="content-container">
-        <!-- Header (Navigation) -->
-        <nav class="navbar">
-            <!-- Hamburger Icon -->
-            <div class="hamburger" onclick="openNavWindow()">
-                &#9776;
-            </div>
-        
-            <!-- Navigation Items -->
-            <ul class="nav-items">
-                <li><a href="home.html">Home</a></li>
+        <nav class="navbar" id="nav-toggle">
+            <input type="checkbox" onclick="openNavWindow()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="nav-items" id="menu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="rules.html">How it works</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html"class="active">Contact</a></li>
             </ul>
         </nav>
-        
 
-        <!-- Contact body -->
-        <section id="contact">
-            <h2>Fabio Nicola Burri</h2>
-            <p></p>
-            <p>Text</p>
-        </section>
+      <!-- Contact body -->
+      <section id="contact">
+        <h2>Fabio Nicola Burri</h2>
+        <p></p>
+        <p>Text</p>
+      </section>
     </div>
 
     <!-- Footer -->
-    <footer class= "footer">
-        <p>Mehr über mich erfährst du</p>
-        <p>auf den Social-Media-Kanälen</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/fabio.burri10" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/fabioburri/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/fabio-nicola-burri/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/FabioBurri" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
+    <footer class="footer">
+      <p>Mehr über mich erfährst du</p>
+      <p>auf den Social-Media-Kanälen</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/fabio.burri10" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/fabioburri/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/fabio-nicola-burri/"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/FabioBurri" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
     </footer>
-    
-<script src="script.js"></script>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,5 +1,8 @@
 /* Default styles */
-body, h1, p, ul {
+body,
+h1,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -10,132 +13,91 @@ h1 {
   margin-bottom: 20px;
 }
 
-
-/* Navigation Bar styles */
 .navbar {
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  display: inline-block;
-}
-
-.navbar li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.navbar a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1em;
-  position: relative;
-  transition: font-weight 0.3s;
-}
-
-.navbar a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: black;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.navbar a.active::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.navbar a:hover {
-  font-weight: bold;
-  background-color: transparent;
-}
-
-/* Hamburger style */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
+  height: 4rem;
+  display: flex;
 }
 
 .nav-items {
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .nav-items li {
-  margin: 0 20px;
+  list-style: none;
 }
 
-
-/* Side Navigation styles */
-.side-nav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.side-nav a {
-  padding: 10px 15px 10px 32px;
+.nav-items li a {
   text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  transition: 0.3s;
+  color: black;
+  font-weight: 700;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: rgb(81, 81, 81);
+    text-decoration: underline;
+  }
 }
 
-.side-nav a:hover {
-  color: #f1f1f1;
+#nav-toggle input {
+  display: none;
 }
-
-
+@media (min-width: 601px) {
+  #menu {
+    display: flex;
+  }
+}
 /* Responsive styles for smaller screens */
 @media (max-width: 600px) {
-  .hamburger {
-      display: block;
+  #nav-toggle {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  #nav-toggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  #nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    top: 50px;
+    left: 50px;
+    position: relative;
+    background: #333;
+    border-radius: 4px;
+    z-index: 1;
   }
 
   .nav-items {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-  }
-
-  .nav-items.active {
-      display: flex;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    flex-direction: column;
+    align-items: start;
+    z-index: 1;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
-
-
-
 
 /* Section styles */
 section {
@@ -187,7 +149,6 @@ body {
   min-height: 100vh;
 }
 
-
 /* Container for the quiz */
 .quiz-container {
   max-width: 600px;
@@ -205,7 +166,6 @@ body {
   gap: 1rem;
 }
 
-
 /* Answer buttons style */
 .answer-option {
   display: block;
@@ -213,7 +173,7 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -225,11 +185,9 @@ body {
   background-color: #45a049;
 }
 
-
 .answer-option:hover {
-  background-color: #00688B;
+  background-color: #00688b;
 }
-
 
 /* Progress bar style */
 .progress-container {
@@ -243,7 +201,7 @@ body {
 .progress-bar {
   width: 0;
   height: 100%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border-radius: 4px;
 }
 
@@ -286,7 +244,7 @@ body {
 }
 
 .hero-image::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -296,12 +254,11 @@ body {
   z-index: -1;
 }
 
-
 .to-quiz-button {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -315,7 +272,6 @@ body {
   font-size: 20px;
   margin-bottom: 60px;
 }
-
 
 /* How it works page style */
 #rules-page {

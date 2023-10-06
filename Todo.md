@@ -1,7 +1,6 @@
 To dos
 
 Design:
-- Hamburgermenü Bug ändern > soll nicht in einem zusätzlichen Tab geöffnet werden
 - Mehr Abstände
 - Grösse der Flagge allenfalls anpassen
 - Farben ändern und Hintergrund allenfalls anpassen
@@ -15,3 +14,8 @@ Funktionell:
 - Startknopf für das Quiz
 - "Restart"-Knopf
 - Kein Limit an Guesses
+
+
+Links, die ich benutzt habe:
+- https://alvarotrigo.com/blog/hamburger-menu-css/
+- https://www.w3schools.com/howto/howto_js_topnav_responsive.asp

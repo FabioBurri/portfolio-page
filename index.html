@@ -10,17 +10,13 @@
 
 <body>
     <div class="content-container">
-        <!-- Header (Navigation) -->
-        <nav class="navbar">
-            <!-- Hamburger Icon -->
-            <div class="hamburger" onclick="openNavWindow()">
-                &#9776;
-            </div>
-        
-            <!-- Navigation Items -->
-            <div id="nav-overlay" class="nav-overlay"></div>
-            <ul class="nav-items">
-                <li><a href="home.html" class="active">Home</a></li>
+        <nav class="navbar" id="nav-toggle">
+            <input type="checkbox" onclick="openNavWindow()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="nav-items" id="menu">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="rules.html">How it works</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="contact.html">Contact</a></li>
