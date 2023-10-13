@@ -15,6 +15,9 @@ Funktionell:
 - "Restart"-Knopf
 - Kein Limit an Guesses
 
+Codes:
+- Überflüssiges löschen
+
 
 Links, die ich benutzt habe:
 - https://alvarotrigo.com/blog/hamburger-menu-css/
