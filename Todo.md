@@ -9,11 +9,9 @@ Design:
 
 Funktionell:
 - Bug lösen: Richtige Antwort soll als richtig angezeigt werden
-- Bug lösen: Bei richtiger Antwort soll Resultat während des Quizzes auch um einen Score hoch gehen
-- Nicht immer die gleichen Flaggen / Länder anzeigen
-- Startknopf für das Quiz
-- "Restart"-Knopf
-- Kein Limit an Guesses
+- Bug lösen: Nach Klick auf Restart soll nicht nur eine Frage gestellt werden
+- Bug lösen: Nach Klick auf Restart soll die Score nicht mit der vorherigen summiert werden
+- Umsetellen auf 10 Fragen anstatt 90 Sekunden
 
 Codes:
 - Überflüssiges löschen

@@ -5,7 +5,7 @@ const apiUrl = 'https://restcountries.com/v3.1/all';
 let countriesData = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 180; // Time limit -> set to 3 minutes, could be higher after some tests
+let timeLeft = 90;
 let timerInterval;
 
 // DOM Elements
@@ -55,11 +55,14 @@ async function fetchData() {
   }
 }
 
-// Start the quiz
+const restartButton = document.getElementById('restart-button');
+
 function startGame() {
+  countriesData = shuffleArray(countriesData);
   showNextQuestion();
   timerInterval = setInterval(updateTimer, 1000);
 }
+
 
 // Show the next question
 function showNextQuestion() {
@@ -120,6 +123,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
   if (selectedAnswer === correctAnswer) {
     score++;
     feedbackMessageElement.textContent = 'Correct!';
+    scoreElement.textContent = score;
   } else {
     feedbackMessageElement.textContent =
       'Wrong! The correct answer is ' + correctAnswer;
@@ -147,7 +151,27 @@ function endGame() {
   optionButtons.forEach((button) => (button.style.display = 'none'));
   feedbackMessageElement.textContent = '';
   scoreElement.textContent = `Your Score: ${score}`;
+  restartButton.style.display = 'block';
+  restartButton.addEventListener('click', restartGame);
 }
+
+
+function restartGame() {
+  currentQuestionIndex = 0;
+  score = 0;
+  timeLeft = 90;
+  scoreElement.textContent = '0';
+  timeLeftElement.textContent = '90';
+  flagImage.style.display = 'block';
+  optionButtons.forEach((button) => (button.style.display = 'block'));
+  feedbackMessageElement.textContent = '';
+  clearInterval(timerInterval);
+
+  restartButton.style.display = 'none';
+  
+  startGame();
+}
+
 
 // Start the quiz when the page loads
 fetchData();

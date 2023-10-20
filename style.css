@@ -198,10 +198,6 @@ body {
 }
 
 .answer-option:hover {
-  background-color: #45a049;
-}
-
-.answer-option:hover {
   background-color: #00688b;
 }
 
@@ -282,6 +278,22 @@ body {
   font-size: 20px;
   margin-bottom: 60px;
 }
+
+.restart-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.restart-button:hover {
+  background-color: #45a049;
+}
+
 
 /* How it works page style */
 #rules-page {
