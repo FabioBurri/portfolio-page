@@ -5,7 +5,7 @@ const apiUrl = 'https://restcountries.com/v3.1/all';
 let countriesData = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 90;
+let timeLeft = 30;
 let timerInterval;
 
 // DOM Elements
@@ -84,10 +84,16 @@ function showNextQuestion() {
 
     // Set the answer options text
     optionButtons.forEach((button, index) => {
+      // Remove any previous listeners to avoid multiple triggers
+      button.removeEventListener('click', button.clickListener);
+
+      // Define the new listener
+      button.clickListener = () => checkAnswer(button.textContent, correctAnswer);
+
+      // Assign the listener to the button
+      button.addEventListener('click', button.clickListener);
+
       button.textContent = shuffledOptions[index];
-      button.addEventListener('click', () =>
-        checkAnswer(button.textContent, correctAnswer)
-      );
     });
 
     currentQuestionIndex++;
@@ -159,9 +165,9 @@ function endGame() {
 function restartGame() {
   currentQuestionIndex = 0;
   score = 0;
-  timeLeft = 90;
+  timeLeft = 30;
   scoreElement.textContent = '0';
-  timeLeftElement.textContent = '90';
+  timeLeftElement.textContent = '30';
   flagImage.style.display = 'block';
   optionButtons.forEach((button) => (button.style.display = 'block'));
   feedbackMessageElement.textContent = '';

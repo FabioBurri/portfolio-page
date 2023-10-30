@@ -5,13 +5,10 @@ Design:
 - Grösse der Flagge allenfalls anpassen
 - Farben ändern und Hintergrund allenfalls anpassen
 - Zeitbalken soll ablaufen
-- Logo & Favicon
+- Favicon
 
 Funktionell:
-- Bug lösen: Richtige Antwort soll als richtig angezeigt werden
-- Bug lösen: Nach Klick auf Restart soll nicht nur eine Frage gestellt werden
-- Bug lösen: Nach Klick auf Restart soll die Score nicht mit der vorherigen summiert werden
-- Umsetellen auf 10 Fragen anstatt 90 Sekunden
+- Ergänzen der Kontakt-Seite
 
 Codes:
 - Überflüssiges löschen
