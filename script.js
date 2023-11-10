@@ -5,7 +5,7 @@ const apiUrl = 'https://restcountries.com/v3.1/all';
 let countriesData = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 30;
+let timeLeft = 30; 
 let timerInterval;
 
 // DOM Elements
@@ -15,12 +15,13 @@ const optionButtons = [
   document.getElementById('option2'),
   document.getElementById('option3'),
   document.getElementById('option4'),
-]; // Updated to use getElementById for each button
+];
 const questionElement = document.querySelector('.question');
 const progressBar = document.querySelector('.progress-bar');
 const timeLeftElement = document.getElementById('time-left');
 const scoreElement = document.getElementById('score');
 const feedbackMessageElement = document.getElementById('feedback-message');
+const timerBar = document.querySelector('.timer-bar'); // Added for timer bar
 
 // Hamburger menu
 const openNavWindow = () => {
@@ -143,6 +144,10 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 function updateTimer() {
   timeLeft--;
   timeLeftElement.textContent = timeLeft;
+
+  // Update the timer bar width
+  let widthPercentage = (timeLeft / 30) * 100;  // 30 seconds total duration
+  timerBar.style.width = `${widthPercentage}%`;
 
   if (timeLeft === 0) {
     clearInterval(timerInterval);

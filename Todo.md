@@ -4,8 +4,9 @@ Design:
 - Mehr Abstände
 - Grösse der Flagge allenfalls anpassen
 - Farben ändern und Hintergrund allenfalls anpassen
-- Zeitbalken soll ablaufen
 - Favicon
+- Flagge zentriert
+- Linie rechts und links von der Flagge ebenfalls hinzufügen
 
 Funktionell:
 - Ergänzen der Kontakt-Seite
