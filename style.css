@@ -14,6 +14,7 @@ h1 {
 }
 
 .navbar {
+  margin-bottom: 0;
   height: 4rem;
   display: flex;
 }
@@ -99,6 +100,7 @@ h1 {
   }
 }
 
+
 /* Section styles */
 section {
   padding: 20px;
@@ -151,8 +153,11 @@ body {
 
 /* Container for the quiz */
 .quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 600px;
-  margin: 20px auto;
+  margin: auto;
   background-color: white;
   padding: 50px;
 }
@@ -173,35 +178,24 @@ body {
   background-color: #45a049;
 }
 
-/* Quiz header style */
-.flag-container {
-  width: 202px;
-  height: 152px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #flag-image {
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
+  width: auto;
   border: 2px solid black;
 }
 
 
 /* Question style */
 .question {
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Answer buttons style */
 .answer-option {
   display: block;
-  width: 100%;
+  width: 600px;
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -211,6 +205,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .answer-option:hover {
@@ -224,7 +219,7 @@ body {
   border-radius: 6px;
   background-color: #ccc;
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -239,6 +234,9 @@ body {
   transition: width 0.1s;
 }
 
+.feedback {
+  margin-top: 20px;
+}
 
 /* Final score style */
 .final-score {
@@ -304,6 +302,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   border: none;
+  align-items: center;
 }
 
 .restart-button:hover {
@@ -323,7 +322,6 @@ body {
   margin-top: 30px;
   margin-bottom: 40px;
   text-align: center;
-  color: #333;
 }
 
 #rules-page p {
@@ -341,3 +339,84 @@ body {
 .rules-list li {
   margin-bottom: 5px;
 }
+
+
+/* Contact page */
+
+.contact-flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.profile-picture-container {
+  flex-basis: 20%;
+  padding: 10px;
+}
+
+.profile-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact-details {
+  flex-basis: 75%;
+  padding: 10px;
+}
+
+.contact-details h2 {
+  text-align: left;
+}
+
+.contact-details h1 {
+  text-align: left;
+}
+
+/* Languages Container */
+.languages-container, .countries-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Countries Container */
+.countries-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+}
+
+/* Style for flags */
+.country-flag, .language-flag {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 80px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .profile-picture-container, .contact-details {
+    flex-basis: 100%;
+  }
+
+  .profile-picture-container, .contact-details {
+    flex-basis: 100%;
+  }
+
+  .country-flag, .language-flag {
+    max-width: 60px;
+  }
+}
+
+

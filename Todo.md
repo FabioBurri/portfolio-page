@@ -1,15 +1,9 @@
 To dos
 
-Design:
-- Mehr Abstände
-- Grösse der Flagge allenfalls anpassen
-- Farben ändern und Hintergrund allenfalls anpassen
-- Favicon
-- Flagge zentriert
-- Linie rechts und links von der Flagge ebenfalls hinzufügen
-
 Funktionell:
-- Ergänzen der Kontakt-Seite
+- Ergänzen der Kontakt-Seite mit weiteren Infos zu mir
+- Name mit restlichen Titeln alignen
+- Flaggen ergänzen bei Sprachen und besucht
 
 Codes:
 - Überflüssiges löschen

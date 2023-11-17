@@ -161,7 +161,6 @@ function endGame() {
   questionElement.textContent = 'Quiz Complete!';
   optionButtons.forEach((button) => (button.style.display = 'none'));
   feedbackMessageElement.textContent = '';
-  scoreElement.textContent = `Your Score: ${score}`;
   restartButton.style.display = 'block';
   restartButton.addEventListener('click', restartGame);
 }
@@ -186,3 +185,68 @@ function restartGame() {
 
 // Start the quiz when the page loads
 fetchData();
+
+
+// List of languages spoken, represented by country codes
+const spokenLanguages = ['DE', 'FR', 'US', 'RU'];
+
+// Function to load language flags
+async function loadLanguageFlags() {
+    const languagesContainer = document.getElementById('languages-container');
+
+    for (const languageCode of spokenLanguages) {
+        try {
+            // Fetch data from the API
+            const response = await fetch(`https://restcountries.com/v2/alpha/${languageCode}`);
+            const languageData = await response.json();
+            
+            // Create image element for the flag
+            const flagImage = document.createElement('img');
+            flagImage.src = languageData.flags.png;
+            flagImage.alt = `Flag representing ${languageData.languages[0].name} language`;
+            flagImage.className = 'language-flag';
+
+            // Append the image to the container
+            languagesContainer.appendChild(flagImage);
+        } catch (error) {
+            console.error('Error fetching language flag:', error);
+        }
+    }
+}
+
+
+
+// List of countries visited
+const visitedCountries = ['AUT', 'BE', 'HR', 'CZ', 'GB', 'FR', 'DE', 'HU', 'IE', 'IT', 'XK', 'LT', 'FL', 'MK', 'MT', 'MC', 'PO',
+ 'PT', 'RO', 'RU', 'SK', 'SI', 'ES', 'NL', 'TR', 'UA', 'CN', 'HK', 'MY', 'MM', 'PH', 'SG', 'AE', 'VN', 'US', 'CO', 'EC',
+  'PE', 'ID'];
+
+// Function to load flags
+async function loadFlags() {
+    const countriesContainer = document.getElementById('countries-container');
+
+    for (const countryCode of visitedCountries) {
+        try {
+            // Fetch data from the API
+            const response = await fetch(`https://restcountries.com/v2/alpha/${countryCode}`);
+            const countryData = await response.json();
+            
+            // Create image element for the flag
+            const flagImage = document.createElement('img');
+            flagImage.src = countryData.flags.png;
+            flagImage.alt = `Flag of ${countryData.name}`;
+            flagImage.className = 'country-flag';
+
+            // Append the image to the container
+            countriesContainer.appendChild(flagImage);
+        } catch (error) {
+            console.error('Error fetching flag:', error);
+        }
+    }
+}
+
+// Call the functions when the window loads
+window.onload = () => {
+    loadFlags();
+    loadLanguageFlags();
+};
