@@ -1,10 +1,5 @@
 To dos
 
-Funktionell:
-- Ergänzen der Kontakt-Seite mit weiteren Infos zu mir
-- Name mit restlichen Titeln alignen
-- Flaggen ergänzen bei Sprachen und besucht
-
 Codes:
 - Überflüssiges löschen
 
