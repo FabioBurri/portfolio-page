@@ -217,8 +217,8 @@ async function loadLanguageFlags() {
 
 
 // List of countries visited
-const visitedCountries = ['AUT', 'BE', 'HR', 'CZ', 'GB', 'FR', 'DE', 'HU', 'IE', 'IT', 'XK', 'LT', 'FL', 'MK', 'MT', 'MC', 'PO',
- 'PT', 'RO', 'RU', 'SK', 'SI', 'ES', 'NL', 'TR', 'UA', 'CN', 'HK', 'MY', 'MM', 'PH', 'SG', 'AE', 'VN', 'US', 'CO', 'EC',
+const visitedCountries = ['AUT', 'BE', 'HR', 'CZ', 'GB', 'FR', 'DE', 'HU', 'IE', 'IT', 'XK', 'LT', 'FL', 'MK', 'MT', 'MC', 'PL',
+ 'PT', 'RO', 'RU', 'SK', 'SI', 'ES', 'NL', 'TR', 'UA', 'CN', 'HK', 'MY', 'CH', 'MM', 'PH', 'SG', 'AE', 'VN', 'US', 'CO', 'EC',
   'PE', 'ID'];
 
 // Function to load flags
