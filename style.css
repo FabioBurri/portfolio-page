@@ -51,7 +51,8 @@ h1 {
     display: flex;
   }
 }
-/* Responsive styles for smaller screens */
+
+/* Smaller screens */
 @media (max-width: 600px) {
   #nav-toggle {
     display: block;
@@ -100,8 +101,6 @@ h1 {
   }
 }
 
-
-/* Section styles */
 section {
   padding: 20px;
   background-color: white;
@@ -109,12 +108,10 @@ section {
   margin: 20px 0;
 }
 
-/* Footer at the bottom */
 .content-container {
   flex: 1;
 }
 
-/* Footer style */
 .footer {
   background-color: lightgrey;
   text-align: center;
@@ -125,7 +122,6 @@ section {
   width: 100%;
 }
 
-/* Social Media Icons styles */
 .social-media {
   margin-top: 20px;
   display: flex;
@@ -151,7 +147,6 @@ body {
   min-height: 100vh;
 }
 
-/* Container for the quiz */
 .quiz-container {
   display: flex;
   flex-direction: column;
@@ -186,13 +181,11 @@ body {
 }
 
 
-/* Question style */
 .question {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-/* Answer buttons style */
 .answer-option {
   display: block;
   width: 600px;
@@ -212,7 +205,6 @@ body {
   background-color: #00688b;
 }
 
-/* Progress bar style */
 .timer-container {
   width: 100%;
   height: 20px;
@@ -238,17 +230,14 @@ body {
   margin-top: 20px;
 }
 
-/* Final score style */
 .final-score {
   text-align: center;
   font-size: 24px;
   margin-top: 20px;
 }
 
-/* Home page style */
 .hero-image {
   background-image: url('https://flagpoles.co.uk/wp-content/uploads/2018/03/12.jpg');
-  /* another picture: https://cdn11.bigcommerce.com/s-ccu2fgip1l/product_images/uploaded_images/flags-around-the-world.png*/
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -309,8 +298,6 @@ body {
   background-color: #45a049;
 }
 
-
-/* How it works page style */
 #rules-page {
   max-width: 800px;
   margin: 0 auto;
@@ -339,9 +326,6 @@ body {
 .rules-list li {
   margin-bottom: 5px;
 }
-
-
-/* Contact page */
 
 .contact-flex-container {
   display: flex;
@@ -374,7 +358,6 @@ body {
   text-align: left;
 }
 
-/* Languages Container */
 .languages-container, .countries-container {
   margin-bottom: 20px;
   padding: 10px;
@@ -385,7 +368,6 @@ body {
   gap: 10px;
 }
 
-/* Countries Container */
 .countries-container {
   margin-bottom: 20px;
   padding: 10px;
@@ -396,7 +378,6 @@ body {
   gap: 10px;
 }
 
-/* Style for flags */
 .country-flag, .language-flag {
   width: 100%;
   height: auto;
